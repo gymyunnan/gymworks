@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd">
+	
+	
+	<bean id="mybook" class="book.BookImpl">
+		<constructor-arg index="0" value="JavaEE框架"/>
+	</bean>
+	
+	
+
+	
+	<bean id="mystudent" class="student.StudentImpl">
+		<constructor-arg index="0" value="小明"/> 
+		<constructor-arg index="1" value="大三"/> 
+		<constructor-arg index="2" value="22"/> 
+		<constructor-arg index="3" ref="mybook"/> 
+	</bean>
+	
+	
+<!-- 	<bean id="mybook1" class="book.BookImpl">
+		<property name="name" value="高等数学"/>
+	</bean> -->
+	
+
+	
+	<bean id="mystudent1" class="student.StudentImpl1">
+		<property name="name" value="小灵"/>
+		<property name="grade" value="大一"/>
+		<property name="age" value="18"/>
+		<property name="book" ref="mybook"/>
+	</bean>
+
+	
+</beans>
