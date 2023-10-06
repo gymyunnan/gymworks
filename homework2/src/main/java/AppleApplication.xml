@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	
+	<bean id="myAppleDao" class="dao.AppleDaoImpl"/>
+	
+	<bean id="myAppleService" class="service.AppleServiceImpl">
+		<property name="appleDao" ref="myAppleDao"/>
+
+	</bean>
+	
+		<bean id="myAppleController" class="controller.AppleController">
+		<property name="appleService" ref="myAppleService"/>
+
+	</bean>
+
+	
+</beans>
