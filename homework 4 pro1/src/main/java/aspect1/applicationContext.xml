@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/aop
+        http://www.springframework.org/schema/aop/spring-aop.xsd">
+        
+	<!-- 定义目标对象 -->
+ 	<bean id="eatAppleImpl" class="proxyFactory.EatAppleImpl"/> 
+ 	<!-- 创建一个切面 -->  
+ 	<bean id="myAspect" class="aspect1.MyAspect"/>  
+ 	<!-- AOP配置 -->
+ 	<aop:config>
+ 		<!-- 配制切面 -->
+ 		<aop:aspect ref="myAspect">
+ 			<aop:pointcut expression="execution(* proxyFactory.*.*(..))" id="myPointCut"/>
+ 			<aop:before method="before" pointcut-ref="myPointCut"/>
+ 			<aop:after  method="after" pointcut-ref="myPointCut"/>
+ 			<aop:around  method="around" pointcut-ref="myPointCut"/>
+ 		</aop:aspect>
+ 	</aop:config>	
+</beans>
