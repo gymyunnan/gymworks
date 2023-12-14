@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Order Details</title>
+</head>
+<body>
+<h1>Order Details</h1>
+<table>
+    <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Sex</th>
+        <th>List</th>
+
+    </tr>
+    <tr th:if="${person != null}">
+        <td th:text="${person.id}"></td>
+        <td th:text="${person.name}"></td>
+        <td th:text="${person.sex}"></td>
+        <td>
+            <ul th:if="${person.ordersList != null}">
+                <li th:each="order : ${person.ordersList}" th:text="${order}"></li>
+            </ul>
+        </td>
+    </tr>
+</table>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Order Details</title>
+</head>
+<body>
+<h1>Order Details</h1>
+<table>
+    <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Sex</th>
+        <th>Ordersn</th>
+    </tr>
+    <tr th:each="person : ${person}">
+        <td th:text="${person.id}"></td>
+        <td th:text="${person.name}"></td>
+        <td th:text="${person.sex}"></td>
+        <td th:text="${person.ordersn}"></td>
+    </tr>
+</table>
+</body>
+</html>
