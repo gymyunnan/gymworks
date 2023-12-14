@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Apple Details</title>
+</head>
+<body>
+<h1>Apple Details</h1>
+<table>
+    <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Color</th>
+        <th>Price</th>
+    </tr>
+    <tr th:if="${apple != null}">
+        <td th:text="${apple.id}"></td>
+        <td th:text="${apple.name}"></td>
+        <td th:text="${apple.color}"></td>
+        <td th:text="${apple.price}"></td>
+    </tr>
+</table>
+</body>
+</html>

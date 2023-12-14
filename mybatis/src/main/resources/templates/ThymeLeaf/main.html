@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>主页</title>
+</head>
+<body>
+<h1>selectOneApple</h1>
+<form action="/apples/selectOneApple" method="post">
+    <label >输入要查询的id：</label>
+    <input type="text"  name="id"><br>
+    <button type="submit">查询</button>
+</form>
+
+<h1>selectAllApple</h1>
+<form action="/apples/selectAllApple" method="post">
+    <button type="submit">查询</button>
+</form>
+
+<h1>deleteOneApple</h1>
+<form action="/apples/deleteOneApple" method="post">
+    <label>输入要删除的id:</label>
+    <input type="text" name="id"><br>
+    <button type="submit">删除</button>
+</form>
+
+<h1>addOneApple</h1>
+<form action="/apples/addOneApple" method="post">
+    <label>Name:</label>
+    <input type="text"  name="name">
+    <br>
+    <label>Color:</label>
+    <input type="text" name="color">
+    <br>
+    <label>Price:</label>
+    <input type="text"  name="price">
+    <br>
+    <button type="submit">添加</button>
+</form>
+
+<h1>updateOneApple</h1>
+<form action="/apples/updateOneApple" method="post">
+    <label>Id:</label>
+    <input type="text"  name="id">
+    <br>
+    <label>Name:</label>
+    <input type="text"  name="name">
+    <br>
+    <label>Color:</label>
+    <input type="text" name="color">
+    <br>
+    <label>Price:</label>
+    <input type="text"  name="price">
+    <br>
+    <button type="submit">更新</button>
+</form>
+
+<h1>selectLeastApple</h1>
+<form action="/apples/selectLeastApple" method="post">
+    <button type="submit">查询</button>
+</form>
+
+</body>
+</html>
