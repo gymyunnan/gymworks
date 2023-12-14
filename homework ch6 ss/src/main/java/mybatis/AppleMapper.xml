@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="dao.AppleDao">
+	<!-- 查询单个苹果 -->
+	<select id="selectAppleById" parameterType="Integer" resultType="po.Apple">
+		select * from appledetail where id = #{id}
+	</select>
+	<!-- 查询所有苹果 -->
+	<select id="selectAllApple" resultType="po.Apple">
+		select * from appledetail
+	</select>
+	<!-- 添加一个苹果 -->
+	<insert id="addApple" parameterType="po.Apple">
+		insert into appledetail (name,color,price) values(#{name},#{color},#{price})
+	</insert>
+	<!-- 修改一个苹果 -->
+	<update id="updateApple" parameterType="po.Apple">
+		update appledetail set name = #{name}, color = #{color}, price = #{price} where id = #{id}
+	</update>
+	<!-- 删除一个苹果 -->
+	<delete id="deleteApple" parameterType="Integer">
+		delete from appledetail where id = #{id}
+	</delete>
+</mapper>
