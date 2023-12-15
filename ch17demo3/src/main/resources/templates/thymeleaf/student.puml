@@ -1,0 +1,12 @@
+@startuml
+
+actor 学生
+participant 课本实体 as 实体
+
+activate 实体
+
+学生 -> 实体: 购买课本
+
+deactivate 实体
+
+@enduml
